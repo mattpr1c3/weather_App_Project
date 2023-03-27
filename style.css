@@ -7024,8 +7024,8 @@ textarea.materialize-textarea {
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
-  opacity: 0;
-  pointer-events: none;
+  opacity: 100%;
+  /* pointer-events: none; */
 }
 
 [type="checkbox"] {
@@ -9313,4 +9313,24 @@ input[type="range"]::-ms-thumb {
     text-align: center;
     margin-top: 1.2rem;
   }
+}
+
+#temp {
+    font-size: 32px;
+}
+
+#state {
+    display: block;
+}
+
+#submit {
+    margin-top: 100px;
+}
+
+#checkbox {
+    margin-top: 5px;
+}
+
+#checkboxL {
+    margin-left: 20px;
 }
