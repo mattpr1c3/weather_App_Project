@@ -9,8 +9,20 @@
   </head>
   <body>
     <div>
+      <h1 id="title-header">
+        Welcome to the Open Weather Application
+      </h1>
+      <pre id="intro-p">
+        Simply enter your desired city, select the corresponding 
+        state from the dropdown menu, and click "Get Temp." 
+        Should you wish to save the weather information for any
+        location, select the "Save Area" checkbox before retrieving 
+        the weather information.
+      </pre>
+    </div>
+    <div>
       <form id="form">
-        <input type="text" id="city" /><label for="city">City</label>
+        <input type="text" id="city" /><label id="cityy" for="city">City</label>
         <div class="input-field col s12">
           <select name="state" id="state">
             <option value="">Please Select State</option>
@@ -44,7 +56,7 @@
       </div>
     </div>
     <div>
-      <button id="showAreasBtn">Show Saved Areas</button>
+      
       <ul id="savedAreasList">
         
       </ul>

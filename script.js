@@ -123,6 +123,7 @@ function saveArea(enteredCity, enteredState) {
     let obj = {
       city: enteredCity,
       state: enteredState,
+      time: new Date().toLocaleTimeString()
     };
     savedAreas.push(obj);
     console.log(savedAreas);
@@ -142,15 +143,18 @@ function selectedAreasList() {
   let ul = document.getElementById("savedAreasList");
   let location = document.getElementsByClassName("location")
   Array.from(location).forEach(e => e.remove())
-  savedAreas.forEach((area) => {
+  savedAreas.forEach((area, index) => {
     let li = document.createElement("li");
     li.classList.add("location")
-    li.textContent = `${area.city}, ${area.state}`;
-    console.log("This is the content:", li.textContent);
+    li.textContent = `${area.city}, ${area.state}, ${area.time}`;
+    // console.log("This is the content:", li.textContent);
     ul.appendChild(li);
+    li.addEventListener("click", () => {getCityWeather(area.city, area.state)})
+    // const date = new Date()
+    // console.log(date.toLocaleTimeString())
+    // let p = document.createElement("p")
+    // p.textContent = date.toLocaleTimeString()
+    // li.appendChild(p)
   });
 }
 
-function removeSavedArea() {
-  
-}
